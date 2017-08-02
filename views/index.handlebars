@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <img src="assets/img/hamburger_by_mis3161.png" class="img-rounded">
+        <h1>Eat-Da-Burger!</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-md-5 col-md-offset-1" id="displayBurger">
+            <ul>
+                {{#each burgers}} {{#unless this.devoured}}
+                <div class="well">
+                    <li>
+                        <span>{{this.burger_name}}</span>
+                        <form action="/{{this.id}}?_method=PUT" method="POST" style="display:inline">
+                            {{!-- <input type="hidden" name="devour" value="true"> --}}
+                            <button type="submit" class="btn btn-danger btn-sm pull-right" id="devour">Devour <i class="fa fa-cutlery" aria-hidden="true"></i></button>
+                        </form>
+                        {{!-- {{> cats/delete-cat}} --}}
+                    </li>
+
+                </div>
+                {{/unless}} {{/each}}
+            </ul>
+        </div>
+
+        <div class="col-md-4" id="displayAteBurger">
+            <div class="panel panel-default">
+                {{!-- <div class="panel-heading">
+                    <h3 class="panel-title">You ate</h3>
+                </div> --}}
+                <div class="panel-body">
+                    <ul>
+                        {{#each burgers}} {{#if this.devoured}}
+                        <li>
+                            <span> {{this.burger_name}}</span>
+                        </li>
+                        {{/if}} {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--close second row-->
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form action="/" method="POST">
+                <div class="form-group">
+                    <label for="burgerName">Enter a Burger you would like to eat: </label>
+                    <input type="text" id="burgerName" name="burgerName" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-warning btn-block">Add a Burger</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>
+<!--closing container div-->

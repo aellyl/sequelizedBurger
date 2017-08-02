@@ -1,0 +1,55 @@
+h1 {
+    text-align: center;
+    margin-bottom:2%;
+}
+
+#devour {
+    position:relative;
+    bottom:5px
+}
+
+#displayBurger li {
+     list-style: none;
+	background-image: url("../img/burger-flat.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:5px;
+}
+
+#displayBurger span, #displayAteBurger span{
+    margin-left:35px
+}
+
+#displayAteBurger li {
+     list-style: none;
+	background-image: url("../img/happy.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding:5px;
+    opacity: 0.7;
+
+}
+#displayAteBurger .panel-title
+{
+    text-align: center;
+}
+
+img{
+    display:block;
+    width:15%;
+    margin:0 auto;
+}
+
+body{
+    background-color: #ffe7c4;
+}
+
+.well{
+    margin-bottom:2%;
+    border:0;
+    padding:10px;
+}
+
+.panel ul{
+    padding-left:10px;
+}

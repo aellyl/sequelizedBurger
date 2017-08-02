@@ -1,0 +1,27 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "WebDev Bootcamp 14 homework - Eat Da Burger application. practice MVC and ORM concept",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aellyl/burger.git"
+  },
+  "author": "Aelly Liu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aellyl/burger/issues"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.10",
+    "method-override": "^2.3.9",
+    "mysql": "^2.13.0"
+  }
+}
