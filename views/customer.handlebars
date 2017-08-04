@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div>
+                <h1>Customers</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th># of Burger eaten</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{#each customers}}
+                        <tr>
+                            <td>{{this.customer_name}}</td>
+
+                             <td>{{this.burgerCnt}}</td> 
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <form action="/customer/new" method="POST">
+                <div class="form-group">
+                    <label for="customer-name"> Customer Name:</label>
+                    <input placeholder="Enter a name" id="customer-name" name="customer" type="text" class="form-control" />
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Add A New Customer</button>
+            </form>
+        </div>
+    </div>
+
+</div>

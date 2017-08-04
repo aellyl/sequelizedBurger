@@ -10,10 +10,16 @@
                 {{#each burgers}} {{#unless this.devoured}}
                 <div class="well">
                     <li>
-                        <span>{{this.burger_name}}</span>
-                        <form action="/{{this.id}}?_method=PUT" method="POST" style="display:inline">
+                        <div class="display_title" style="font-size:18pt;">{{this.burger_name}}</div>
+                        <div class="noCustomer"><a href="/customer">Add a customer</a> to start eating!</div>
+                        <form class="hidden" action="/{{this.id}}?_method=PUT" method="POST" style="display:inline;float: right;">
                             {{!-- <input type="hidden" name="devour" value="true"> --}}
-                            <button type="submit" class="btn btn-danger btn-sm pull-right" id="devour">Devour <i class="fa fa-cutlery" aria-hidden="true"></i></button>
+                            <div class="form-group">
+                                <label>Select a Customer:</label>
+                                <select class="form-control customers" name="customer">
+  						        </select>
+                            </div>
+                            <button type="submit" class="btn btn-danger btn-sm btn-block" id="devour">Devour <i class="fa fa-cutlery" aria-hidden="true"></i></button>
                         </form>
                         {{!-- {{> cats/delete-cat}} --}}
                     </li>
@@ -25,14 +31,15 @@
 
         <div class="col-md-4" id="displayAteBurger">
             <div class="panel panel-default">
-                {{!-- <div class="panel-heading">
+                {{!--
+                <div class="panel-heading">
                     <h3 class="panel-title">You ate</h3>
                 </div> --}}
                 <div class="panel-body">
                     <ul>
                         {{#each burgers}} {{#if this.devoured}}
                         <li>
-                            <span> {{this.burger_name}}</span>
+                            <div class="display_title"> {{this.burger_name}} - {{this.seq_customer.customer_name}}</div>
                         </li>
                         {{/if}} {{/each}}
                     </ul>
@@ -48,7 +55,7 @@
             <form action="/" method="POST">
                 <div class="form-group">
                     <label for="burgerName">Enter a Burger you would like to eat: </label>
-                    <input type="text" id="burgerName" name="burgerName" class="form-control">
+                    <input type="text" id="burgerName" name="burgerName" class="form-control" placeholder="Enter a burger name">
                 </div>
                 <button type="submit" class="btn btn-warning btn-block">Add a Burger</button>
             </form>

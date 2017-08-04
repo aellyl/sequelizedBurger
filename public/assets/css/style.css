@@ -14,11 +14,17 @@ h1 {
     background-size: contain;
     background-repeat: no-repeat;
     padding:5px;
+    
 }
 
-#displayBurger span, #displayAteBurger span{
-    margin-left:35px
+.display_title{
+    margin-left: 15%;
+    display: inline;
+    
 }
+/* #displayBurger div{
+    font-size: 14pt;
+} */
 
 #displayAteBurger li {
      list-style: none;
@@ -48,8 +54,34 @@ body{
     margin-bottom:2%;
     border:0;
     padding:10px;
+    overflow: hidden;
 }
 
 .panel ul{
     padding-left:10px;
+}
+
+.navbar-brand{
+    padding: 5px 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+.noCustomer {
+    display:inline;
+    float: right; 
+    width: 30%; 
+    border:1px solid #bbb;
+}
+
+td, th{
+    border-color:#c9542f !important;
+    text-align: center;
+}
+
+table{
+    table-layout: fixed;
+    
 }

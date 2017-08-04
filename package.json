@@ -1,7 +1,7 @@
 {
-  "name": "burger",
+  "name": "sequelizedburger",
   "version": "1.0.0",
-  "description": "WebDev Bootcamp 14 homework - Eat Da Burger application. practice MVC and ORM concept",
+  "description": "WebDev Bootcamp lesson 15 homework - Eat Da Burger application. practice Sequelize.js",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,19 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/aellyl/burger.git"
+    "url": "git+https://github.com/aellyl/sequelizedBurger.git"
   },
   "author": "Aelly Liu",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/aellyl/burger/issues"
+    "url": "https://github.com/aellyl/sequelizedBurger/issues"
   },
+  "homepage": "https://github.com/aellyl/sequelizedBurger#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "handlebars": "^4.0.10",
     "method-override": "^2.3.9",
-    "mysql": "^2.13.0"
+    "mysql": "^2.14.1",
+    "mysql2": "^1.3.6",
+    "sequelize": "^4.4.2"
   }
 }
