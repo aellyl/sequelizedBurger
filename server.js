@@ -17,6 +17,12 @@ app.use(md("_method"));
 app.engine("handlebars",ephb({defaultLayout:"main"}));
 app.set("view engine","handlebars");
 
+// Sets up the Express app to handle data parsing
+app.use(bp.json());
+app.use(bp.urlencoded({ extended: true }));
+app.use(bp.text());
+app.use(bp.json({ type: "application/vnd.api+json" }));
+
 // Import routes and give the server access to them.
 var routes = require("./controllers/burgers_controllers.js");
 app.use("/", routes);
@@ -26,7 +32,5 @@ app.use("/", routes);
 db.sequelize.sync({ force: true }).then(function() {
   app.listen(port, function() {
     console.log("App listening on PORT " + port);
-  }).reject(function(err){
-    console.log(err);
   });
 });
